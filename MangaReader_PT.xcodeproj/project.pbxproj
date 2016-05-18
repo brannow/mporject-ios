@@ -1,0 +1,693 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		43055DFF1BE4DAD7007033A1 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43055DFD1BE4DAD7007033A1 /* DetailViewController.m */; };
+		43055E001BE4DAD7007033A1 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43055DFE1BE4DAD7007033A1 /* DetailViewController.xib */; };
+		4342BEB71BC593C20057C790 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4342BEB61BC593C20057C790 /* main.m */; };
+		4342BEBA1BC593C20057C790 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4342BEB91BC593C20057C790 /* AppDelegate.m */; };
+		4342BEC31BC593C20057C790 /* MangaReader_PT.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4342BEC11BC593C20057C790 /* MangaReader_PT.xcdatamodeld */; };
+		4342BEC51BC593C20057C790 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4342BEC41BC593C20057C790 /* Assets.xcassets */; };
+		4342BED31BC593C20057C790 /* MangaReader_PTTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4342BED21BC593C20057C790 /* MangaReader_PTTests.m */; };
+		4342BEDE1BC593C30057C790 /* MangaReader_PTUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4342BEDD1BC593C30057C790 /* MangaReader_PTUITests.m */; };
+		4342BEEC1BC5953E0057C790 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4342BEEB1BC5953E0057C790 /* LaunchScreen.storyboard */; };
+		4342BEF11BC5984B0057C790 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4342BEF01BC5984B0057C790 /* MainViewController.m */; };
+		4342BEF41BC5987D0057C790 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4342BEF31BC5987D0057C790 /* MainView.xib */; };
+		4342BEF91BC5A7A60057C790 /* SpringBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4342BEF81BC5A7A60057C790 /* SpringBoardView.m */; };
+		4342BF031BC5A81C0057C790 /* SpringBoardFolderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4342BF021BC5A81C0057C790 /* SpringBoardFolderView.m */; };
+		4342BF061BC5A83B0057C790 /* SpringBoardItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4342BF051BC5A83B0057C790 /* SpringBoardItemView.m */; };
+		4362E03C1BD3D00C000FC266 /* SpringBoardCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 4362E03B1BD3D00C000FC266 /* SpringBoardCache.m */; };
+		4362E0401BD3DAAF000FC266 /* ImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 4362E03F1BD3DAAF000FC266 /* ImageCache.m */; };
+		43BE75FF1BE177050044DF6B /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43BE75FD1BE177050044DF6B /* SearchViewController.m */; };
+		43BE76001BE177050044DF6B /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43BE75FE1BE177050044DF6B /* SearchViewController.xib */; };
+		43F7E9251BD414A800D3CDEF /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F7E9241BD414A800D3CDEF /* NavigationViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4342BECF1BC593C20057C790 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4342BEAA1BC593C20057C790 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4342BEB11BC593C20057C790;
+			remoteInfo = MangaReader_PT;
+		};
+		4342BEDA1BC593C20057C790 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4342BEAA1BC593C20057C790 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4342BEB11BC593C20057C790;
+			remoteInfo = MangaReader_PT;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		43055DFC1BE4DAD7007033A1 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		43055DFD1BE4DAD7007033A1 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		43055DFE1BE4DAD7007033A1 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		4311733D1BCAB9DE00BF6CF7 /* SpringBoardFolderViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpringBoardFolderViewDelegate.h; sourceTree = "<group>"; };
+		4342BEB21BC593C20057C790 /* MangaReader_PT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MangaReader_PT.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4342BEB61BC593C20057C790 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4342BEB81BC593C20057C790 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4342BEB91BC593C20057C790 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4342BEC21BC593C20057C790 /* MangaReader_PT.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MangaReader_PT.xcdatamodel; sourceTree = "<group>"; };
+		4342BEC41BC593C20057C790 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4342BEC91BC593C20057C790 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4342BECE1BC593C20057C790 /* MangaReader_PTTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MangaReader_PTTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4342BED21BC593C20057C790 /* MangaReader_PTTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MangaReader_PTTests.m; sourceTree = "<group>"; };
+		4342BED41BC593C20057C790 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4342BED91BC593C20057C790 /* MangaReader_PTUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MangaReader_PTUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4342BEDD1BC593C30057C790 /* MangaReader_PTUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MangaReader_PTUITests.m; sourceTree = "<group>"; };
+		4342BEDF1BC593C30057C790 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4342BEEB1BC5953E0057C790 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ../LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4342BEEF1BC5984B0057C790 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		4342BEF01BC5984B0057C790 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		4342BEF31BC5987D0057C790 /* MainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
+		4342BEF71BC5A7A60057C790 /* SpringBoardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpringBoardView.h; sourceTree = "<group>"; };
+		4342BEF81BC5A7A60057C790 /* SpringBoardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpringBoardView.m; sourceTree = "<group>"; };
+		4342BF011BC5A81C0057C790 /* SpringBoardFolderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpringBoardFolderView.h; sourceTree = "<group>"; };
+		4342BF021BC5A81C0057C790 /* SpringBoardFolderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpringBoardFolderView.m; sourceTree = "<group>"; };
+		4342BF041BC5A83B0057C790 /* SpringBoardItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpringBoardItemView.h; sourceTree = "<group>"; };
+		4342BF051BC5A83B0057C790 /* SpringBoardItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpringBoardItemView.m; sourceTree = "<group>"; };
+		4362E03A1BD3D00C000FC266 /* SpringBoardCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpringBoardCache.h; sourceTree = "<group>"; };
+		4362E03B1BD3D00C000FC266 /* SpringBoardCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpringBoardCache.m; sourceTree = "<group>"; };
+		4362E03E1BD3DAAF000FC266 /* ImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCache.h; sourceTree = "<group>"; };
+		4362E03F1BD3DAAF000FC266 /* ImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCache.m; sourceTree = "<group>"; };
+		436E95E41BCA7C50005E80FA /* SpringBoardViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpringBoardViewDelegate.h; sourceTree = "<group>"; };
+		43BE75FC1BE177050044DF6B /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		43BE75FD1BE177050044DF6B /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		43BE75FE1BE177050044DF6B /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		43F7E9231BD414A800D3CDEF /* NavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
+		43F7E9241BD414A800D3CDEF /* NavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4342BEAF1BC593C20057C790 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4342BECB1BC593C20057C790 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4342BED61BC593C20057C790 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		43055DFA1BE4DA9A007033A1 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				43055DFC1BE4DAD7007033A1 /* DetailViewController.h */,
+				43055DFD1BE4DAD7007033A1 /* DetailViewController.m */,
+			);
+			name = Detail;
+			sourceTree = "<group>";
+		};
+		43055DFB1BE4DAA3007033A1 /* Reader */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Reader;
+			sourceTree = "<group>";
+		};
+		43055E011BE4DAE2007033A1 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				43055DFE1BE4DAD7007033A1 /* DetailViewController.xib */,
+			);
+			name = Detail;
+			sourceTree = "<group>";
+		};
+		4342BEA91BC593C20057C790 = {
+			isa = PBXGroup;
+			children = (
+				4342BEB41BC593C20057C790 /* MangaReader_PT */,
+				4342BED11BC593C20057C790 /* MangaReader_PTTests */,
+				4342BEDC1BC593C30057C790 /* MangaReader_PTUITests */,
+				4342BEB31BC593C20057C790 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4342BEB31BC593C20057C790 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4342BEB21BC593C20057C790 /* MangaReader_PT.app */,
+				4342BECE1BC593C20057C790 /* MangaReader_PTTests.xctest */,
+				4342BED91BC593C20057C790 /* MangaReader_PTUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4342BEB41BC593C20057C790 /* MangaReader_PT */ = {
+			isa = PBXGroup;
+			children = (
+				4342BEB81BC593C20057C790 /* AppDelegate.h */,
+				4342BEB91BC593C20057C790 /* AppDelegate.m */,
+				4342BEEE1BC597F80057C790 /* ViewController */,
+				4342BEF51BC5A7630057C790 /* View */,
+				4362E0411BD3DABA000FC266 /* Service */,
+				4342BEED1BC5974F0057C790 /* Interface */,
+				4342BEB51BC593C20057C790 /* Supporting Files */,
+			);
+			path = MangaReader_PT;
+			sourceTree = "<group>";
+		};
+		4342BEB51BC593C20057C790 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4342BEC91BC593C20057C790 /* Info.plist */,
+				4342BEC11BC593C20057C790 /* MangaReader_PT.xcdatamodeld */,
+				4342BEC41BC593C20057C790 /* Assets.xcassets */,
+				4342BEB61BC593C20057C790 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4342BED11BC593C20057C790 /* MangaReader_PTTests */ = {
+			isa = PBXGroup;
+			children = (
+				4342BED21BC593C20057C790 /* MangaReader_PTTests.m */,
+				4342BED41BC593C20057C790 /* Info.plist */,
+			);
+			path = MangaReader_PTTests;
+			sourceTree = "<group>";
+		};
+		4342BEDC1BC593C30057C790 /* MangaReader_PTUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4342BEDD1BC593C30057C790 /* MangaReader_PTUITests.m */,
+				4342BEDF1BC593C30057C790 /* Info.plist */,
+			);
+			path = MangaReader_PTUITests;
+			sourceTree = "<group>";
+		};
+		4342BEED1BC5974F0057C790 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				4342BEEB1BC5953E0057C790 /* LaunchScreen.storyboard */,
+				4342BEF21BC598500057C790 /* MainView */,
+				43BE76011BE1771F0044DF6B /* Search */,
+				43055E011BE4DAE2007033A1 /* Detail */,
+			);
+			name = Interface;
+			sourceTree = "<group>";
+		};
+		4342BEEE1BC597F80057C790 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				43F7E9231BD414A800D3CDEF /* NavigationViewController.h */,
+				43F7E9241BD414A800D3CDEF /* NavigationViewController.m */,
+				43BE76021BE17F170044DF6B /* SpringBoard */,
+				43BE75FB1BE176E70044DF6B /* Search */,
+				43055DFA1BE4DA9A007033A1 /* Detail */,
+				43055DFB1BE4DAA3007033A1 /* Reader */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		4342BEF21BC598500057C790 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				4342BEF31BC5987D0057C790 /* MainView.xib */,
+			);
+			name = MainView;
+			sourceTree = "<group>";
+		};
+		4342BEF51BC5A7630057C790 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4342BEF61BC5A7710057C790 /* SpringBoard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		4342BEF61BC5A7710057C790 /* SpringBoard */ = {
+			isa = PBXGroup;
+			children = (
+				4362E03D1BD3D016000FC266 /* Meta */,
+				4342BEF71BC5A7A60057C790 /* SpringBoardView.h */,
+				4342BEF81BC5A7A60057C790 /* SpringBoardView.m */,
+				4342BF011BC5A81C0057C790 /* SpringBoardFolderView.h */,
+				4342BF021BC5A81C0057C790 /* SpringBoardFolderView.m */,
+				4342BF041BC5A83B0057C790 /* SpringBoardItemView.h */,
+				4342BF051BC5A83B0057C790 /* SpringBoardItemView.m */,
+			);
+			name = SpringBoard;
+			sourceTree = "<group>";
+		};
+		4362E03D1BD3D016000FC266 /* Meta */ = {
+			isa = PBXGroup;
+			children = (
+				436E95E41BCA7C50005E80FA /* SpringBoardViewDelegate.h */,
+				4311733D1BCAB9DE00BF6CF7 /* SpringBoardFolderViewDelegate.h */,
+				4362E03A1BD3D00C000FC266 /* SpringBoardCache.h */,
+				4362E03B1BD3D00C000FC266 /* SpringBoardCache.m */,
+			);
+			name = Meta;
+			sourceTree = "<group>";
+		};
+		4362E0411BD3DABA000FC266 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				4362E03E1BD3DAAF000FC266 /* ImageCache.h */,
+				4362E03F1BD3DAAF000FC266 /* ImageCache.m */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		43BE75FB1BE176E70044DF6B /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				43BE75FC1BE177050044DF6B /* SearchViewController.h */,
+				43BE75FD1BE177050044DF6B /* SearchViewController.m */,
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
+		43BE76011BE1771F0044DF6B /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				43BE75FE1BE177050044DF6B /* SearchViewController.xib */,
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
+		43BE76021BE17F170044DF6B /* SpringBoard */ = {
+			isa = PBXGroup;
+			children = (
+				4342BEEF1BC5984B0057C790 /* MainViewController.h */,
+				4342BEF01BC5984B0057C790 /* MainViewController.m */,
+			);
+			name = SpringBoard;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4342BEB11BC593C20057C790 /* MangaReader_PT */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4342BEE21BC593C30057C790 /* Build configuration list for PBXNativeTarget "MangaReader_PT" */;
+			buildPhases = (
+				4342BEAE1BC593C20057C790 /* Sources */,
+				4342BEAF1BC593C20057C790 /* Frameworks */,
+				4342BEB01BC593C20057C790 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MangaReader_PT;
+			productName = MangaReader_PT;
+			productReference = 4342BEB21BC593C20057C790 /* MangaReader_PT.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4342BECD1BC593C20057C790 /* MangaReader_PTTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4342BEE51BC593C30057C790 /* Build configuration list for PBXNativeTarget "MangaReader_PTTests" */;
+			buildPhases = (
+				4342BECA1BC593C20057C790 /* Sources */,
+				4342BECB1BC593C20057C790 /* Frameworks */,
+				4342BECC1BC593C20057C790 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4342BED01BC593C20057C790 /* PBXTargetDependency */,
+			);
+			name = MangaReader_PTTests;
+			productName = MangaReader_PTTests;
+			productReference = 4342BECE1BC593C20057C790 /* MangaReader_PTTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4342BED81BC593C20057C790 /* MangaReader_PTUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4342BEE81BC593C30057C790 /* Build configuration list for PBXNativeTarget "MangaReader_PTUITests" */;
+			buildPhases = (
+				4342BED51BC593C20057C790 /* Sources */,
+				4342BED61BC593C20057C790 /* Frameworks */,
+				4342BED71BC593C20057C790 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4342BEDB1BC593C20057C790 /* PBXTargetDependency */,
+			);
+			name = MangaReader_PTUITests;
+			productName = MangaReader_PTUITests;
+			productReference = 4342BED91BC593C20057C790 /* MangaReader_PTUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4342BEAA1BC593C20057C790 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Benjamin Rannow";
+				TargetAttributes = {
+					4342BEB11BC593C20057C790 = {
+						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = A6L4DYQ22M;
+					};
+					4342BECD1BC593C20057C790 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = 4342BEB11BC593C20057C790;
+					};
+					4342BED81BC593C20057C790 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = 4342BEB11BC593C20057C790;
+					};
+				};
+			};
+			buildConfigurationList = 4342BEAD1BC593C20057C790 /* Build configuration list for PBXProject "MangaReader_PT" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4342BEA91BC593C20057C790;
+			productRefGroup = 4342BEB31BC593C20057C790 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4342BEB11BC593C20057C790 /* MangaReader_PT */,
+				4342BECD1BC593C20057C790 /* MangaReader_PTTests */,
+				4342BED81BC593C20057C790 /* MangaReader_PTUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4342BEB01BC593C20057C790 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4342BEF41BC5987D0057C790 /* MainView.xib in Resources */,
+				4342BEC51BC593C20057C790 /* Assets.xcassets in Resources */,
+				43055E001BE4DAD7007033A1 /* DetailViewController.xib in Resources */,
+				43BE76001BE177050044DF6B /* SearchViewController.xib in Resources */,
+				4342BEEC1BC5953E0057C790 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4342BECC1BC593C20057C790 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4342BED71BC593C20057C790 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4342BEAE1BC593C20057C790 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4342BF031BC5A81C0057C790 /* SpringBoardFolderView.m in Sources */,
+				4342BEC31BC593C20057C790 /* MangaReader_PT.xcdatamodeld in Sources */,
+				43F7E9251BD414A800D3CDEF /* NavigationViewController.m in Sources */,
+				4342BEBA1BC593C20057C790 /* AppDelegate.m in Sources */,
+				4342BEB71BC593C20057C790 /* main.m in Sources */,
+				4362E03C1BD3D00C000FC266 /* SpringBoardCache.m in Sources */,
+				4342BF061BC5A83B0057C790 /* SpringBoardItemView.m in Sources */,
+				4342BEF11BC5984B0057C790 /* MainViewController.m in Sources */,
+				43BE75FF1BE177050044DF6B /* SearchViewController.m in Sources */,
+				4362E0401BD3DAAF000FC266 /* ImageCache.m in Sources */,
+				4342BEF91BC5A7A60057C790 /* SpringBoardView.m in Sources */,
+				43055DFF1BE4DAD7007033A1 /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4342BECA1BC593C20057C790 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4342BED31BC593C20057C790 /* MangaReader_PTTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4342BED51BC593C20057C790 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4342BEDE1BC593C30057C790 /* MangaReader_PTUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4342BED01BC593C20057C790 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4342BEB11BC593C20057C790 /* MangaReader_PT */;
+			targetProxy = 4342BECF1BC593C20057C790 /* PBXContainerItemProxy */;
+		};
+		4342BEDB1BC593C20057C790 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4342BEB11BC593C20057C790 /* MangaReader_PT */;
+			targetProxy = 4342BEDA1BC593C20057C790 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4342BEE01BC593C30057C790 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4342BEE11BC593C30057C790 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4342BEE31BC593C30057C790 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = MangaReader_PT/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rannow.MangaReader-PT";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		4342BEE41BC593C30057C790 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = MangaReader_PT/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rannow.MangaReader-PT";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		4342BEE61BC593C30057C790 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MangaReader_PTTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rannow.MangaReader-PTTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MangaReader_PT.app/MangaReader_PT";
+			};
+			name = Debug;
+		};
+		4342BEE71BC593C30057C790 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MangaReader_PTTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rannow.MangaReader-PTTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MangaReader_PT.app/MangaReader_PT";
+			};
+			name = Release;
+		};
+		4342BEE91BC593C30057C790 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MangaReader_PTUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rannow.MangaReader-PTUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MangaReader_PT;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		4342BEEA1BC593C30057C790 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MangaReader_PTUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rannow.MangaReader-PTUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MangaReader_PT;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4342BEAD1BC593C20057C790 /* Build configuration list for PBXProject "MangaReader_PT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4342BEE01BC593C30057C790 /* Debug */,
+				4342BEE11BC593C30057C790 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4342BEE21BC593C30057C790 /* Build configuration list for PBXNativeTarget "MangaReader_PT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4342BEE31BC593C30057C790 /* Debug */,
+				4342BEE41BC593C30057C790 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4342BEE51BC593C30057C790 /* Build configuration list for PBXNativeTarget "MangaReader_PTTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4342BEE61BC593C30057C790 /* Debug */,
+				4342BEE71BC593C30057C790 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4342BEE81BC593C30057C790 /* Build configuration list for PBXNativeTarget "MangaReader_PTUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4342BEE91BC593C30057C790 /* Debug */,
+				4342BEEA1BC593C30057C790 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4342BEC11BC593C20057C790 /* MangaReader_PT.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4342BEC21BC593C20057C790 /* MangaReader_PT.xcdatamodel */,
+			);
+			currentVersion = 4342BEC21BC593C20057C790 /* MangaReader_PT.xcdatamodel */;
+			path = MangaReader_PT.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 4342BEAA1BC593C20057C790 /* Project object */;
+}
