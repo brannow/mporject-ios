@@ -62,19 +62,6 @@
     [self.navigationItem setLeftBarButtonItem:edit animated:YES];
 }
 
-- (void) enterSpringBoardEditMode
-{
-    [self showEditBottomBar];
-    UIBarButtonItem *searchItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
-                                                                                target:self
-                                                                                action:@selector(searchButtonItemClicked:)];
-    [self.navigationItem setRightBarButtonItem:searchItem animated:YES];
-    
-    UIBarButtonItem *edit = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
-                                                                          target:self
-                                                                          action:@selector(doneButtonItemClicked:)];
-    [self.navigationItem setLeftBarButtonItem:edit animated:YES];
-}
 
 - (void) showEditBottomBar
 {
@@ -103,11 +90,6 @@
     NavigationViewController *searchNaviController = [[NavigationViewController alloc] initWithRootViewController:searchController];
     searchNaviController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
     [self presentViewController:searchNaviController animated:YES completion:^{}];
-}
-
-- (void) editButtonItemClicked:(UIBarButtonItem*)item
-{
-    [self enterSpringBoardEditMode];
 }
 
 - (void) doneButtonItemClicked:(UIBarButtonItem*)item
