@@ -197,18 +197,8 @@
                    atIndex:(NSInteger)index
 {
     DetailViewController* detailController = [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil];
-    detailController.title = [NSString stringWithFormat:@"Item %lu", index];
+    detailController.title = [NSString stringWithFormat:@"Item %lu", (long)index];
     [self.navigationController pushViewController:detailController animated:YES];
-    /*CABasicAnimation *animation =
-    [CABasicAnimation animationWithKeyPath:@"position"];
-    [animation setDuration:0.05];
-    [animation setRepeatCount:8];
-    [animation setAutoreverses:YES];
-    [animation setFromValue:[NSValue valueWithCGPoint:
-                             CGPointMake([item center].x - 5.0f, [item center].y - 5.0f)]];
-    [animation setToValue:[NSValue valueWithCGPoint:
-                           CGPointMake([item center].x + 5.0f, [item center].y + 5.0f)]];
-    [[item layer] addAnimation:animation forKey:@"position"];*/
 }
 
 @end
