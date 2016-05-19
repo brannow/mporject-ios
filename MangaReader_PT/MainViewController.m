@@ -22,9 +22,6 @@
 @property (nonatomic, strong) ImageCache *imageCache;
 @property (nonatomic) BOOL hasUpdates;
 
-
-@property (weak, nonatomic) IBOutlet UIVisualEffectView *editBottomBarView;
-
 @end
 
 @implementation MainViewController
@@ -50,27 +47,10 @@
 
 - (void) enterSpringboardDefaultMode
 {
-    [self hideEditBottomBar];
     UIBarButtonItem *searchItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch
                                                                                 target:self
                                                                                 action:@selector(searchButtonItemClicked:)];
     [self.navigationItem setRightBarButtonItem:searchItem animated:YES];
-    
-    UIBarButtonItem *edit = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit
-                                                                          target:self
-                                                                          action:@selector(editButtonItemClicked:)];
-    [self.navigationItem setLeftBarButtonItem:edit animated:YES];
-}
-
-
-- (void) showEditBottomBar
-{
-    self.editBottomBarView.hidden = NO;
-}
-
-- (void) hideEditBottomBar
-{
-    self.editBottomBarView.hidden = YES;
 }
 
 - (void) viewDidAppear:(BOOL)animated
