@@ -19,6 +19,9 @@
 - (void) reset;
 - (void) setImage:(UIImage*)image;
 
+- (void) select;
+- (void) unselect;
+
 - (void) renderView;
 
 @end

@@ -9,6 +9,7 @@
 #import "SpringBoardFolderView.h"
 #import "SpringBoardItemView.h"
 #import "SpringBoardFolderViewDelegate.h"
+#import "TouchGestureRecognizer.h"
 
 @interface SpringBoardFolderView ()
 
@@ -26,6 +27,8 @@
 @property (nonatomic) CGFloat viewSize;
 @property (nonatomic) CGFloat maxY;
 @property (nonatomic) NSInteger specialStartEndIndex;
+
+@property (nonatomic, weak) SpringBoardItemView *selectedItem;
 @end
 
 CGFloat const cacheOffsetFolderLimit = 50.0f;
@@ -63,17 +66,46 @@ NSUInteger const pageRowRenderOffset = 1;
     self.scrollIndicatorInsets = UIEdgeInsetsMake(63.0,0.0,0.0,0.0);
     self.recycleItems = [NSMutableArray array];
     
-    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(singleTapGestureCaptured:)];
+    TouchGestureRecognizer *singleTap = [[TouchGestureRecognizer alloc] initWithTarget:self action:@selector(singleTapGestureCaptured:)];
+    singleTap.delegate = self;
     [self addGestureRecognizer:singleTap];
 }
 
-- (void)singleTapGestureCaptured:(UITapGestureRecognizer *)gesture
+- (void)singleTapGestureCaptured:(TouchGestureRecognizer *)gesture
 {
     CGPoint touchPoint=[gesture locationInView:self];
     id subView = [self hitTest:touchPoint withEvent:nil];
     if(subView && [subView isKindOfClass:[SpringBoardItemView class]] && [self.items containsObject:subView]) {
         SpringBoardItemView *item = (SpringBoardItemView*)subView;
-        [self delegateSpringBoardItemSelected:item atIndex:item.index];
+        if (self.selectedItem != nil) {
+            [self.selectedItem unselect];
+        }
+        [self performSelector:@selector(delegateSpringBoardItemSelected:) withObject:item afterDelay:0.15f];
+    }
+}
+
+- (void) touchGestureRecognizer:(TouchGestureRecognizer *)gesture
+             foundPossibleTouch:(UITouch *)touch
+                      withEvent:(UIEvent *)event
+{
+    CGPoint touchPoint=[gesture locationInView:self];
+    id subView = [self hitTest:touchPoint withEvent:nil];
+    if(subView && [subView isKindOfClass:[SpringBoardItemView class]] && [self.items containsObject:subView]) {
+        SpringBoardItemView *item = (SpringBoardItemView*)subView;
+        if (self.selectedItem != nil) {
+            [self.selectedItem unselect];
+        }
+        self.selectedItem = item;
+        [self.selectedItem select];
+    }
+}
+
+- (void) touchGestureRecognizer:(TouchGestureRecognizer *)gesture
+            cancelPossibleTouch:(UITouch *)touch
+                      withEvent:(UIEvent *)event
+{
+    if (self.selectedItem != nil) {
+        [self.selectedItem unselect];
     }
 }
 
@@ -354,10 +386,10 @@ NSUInteger const pageRowRenderOffset = 1;
     return 0;
 }
 
-- (void) delegateSpringBoardItemSelected:(SpringBoardItemView*)item atIndex:(NSInteger)index
+- (void) delegateSpringBoardItemSelected:(SpringBoardItemView*)item
 {
     if ([self.springBoardFolderDelegate respondsToSelector:@selector(springBoardFolder:itemSeleced:atIndex:)]) {
-        [self.springBoardFolderDelegate springBoardFolder:self itemSeleced:item atIndex:index];
+        [self.springBoardFolderDelegate springBoardFolder:self itemSeleced:item atIndex:item.index];
     }
 }
 

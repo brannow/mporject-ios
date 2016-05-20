@@ -25,6 +25,8 @@
 		4362E0401BD3DAAF000FC266 /* ImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 4362E03F1BD3DAAF000FC266 /* ImageCache.m */; };
 		43BE75FF1BE177050044DF6B /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43BE75FD1BE177050044DF6B /* SearchViewController.m */; };
 		43BE76001BE177050044DF6B /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43BE75FE1BE177050044DF6B /* SearchViewController.xib */; };
+		43C2B0BD1CEE713B004F063A /* TouchGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C2B0BC1CEE713B004F063A /* TouchGestureRecognizer.m */; };
+		43C2B0C11CEE97E0004F063A /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43C2B0C01CEE97E0004F063A /* CoreFoundation.framework */; };
 		43F7E9251BD414A800D3CDEF /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F7E9241BD414A800D3CDEF /* NavigationViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +83,10 @@
 		43BE75FC1BE177050044DF6B /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		43BE75FD1BE177050044DF6B /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		43BE75FE1BE177050044DF6B /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		43C2B0BB1CEE713B004F063A /* TouchGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchGestureRecognizer.h; sourceTree = "<group>"; };
+		43C2B0BC1CEE713B004F063A /* TouchGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchGestureRecognizer.m; sourceTree = "<group>"; };
+		43C2B0BE1CEE78AF004F063A /* TouchGestureRecognizerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouchGestureRecognizerDelegate.h; sourceTree = "<group>"; };
+		43C2B0C01CEE97E0004F063A /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		43F7E9231BD414A800D3CDEF /* NavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
 		43F7E9241BD414A800D3CDEF /* NavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43C2B0C11CEE97E0004F063A /* CoreFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +178,7 @@
 		4342BEB51BC593C20057C790 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				43C2B0C21CEE97F7004F063A /* Framework */,
 				4342BEC91BC593C20057C790 /* Info.plist */,
 				4342BEC11BC593C20057C790 /* MangaReader_PT.xcdatamodeld */,
 				4342BEC41BC593C20057C790 /* Assets.xcassets */,
@@ -267,6 +275,9 @@
 			children = (
 				4362E03E1BD3DAAF000FC266 /* ImageCache.h */,
 				4362E03F1BD3DAAF000FC266 /* ImageCache.m */,
+				43C2B0BE1CEE78AF004F063A /* TouchGestureRecognizerDelegate.h */,
+				43C2B0BB1CEE713B004F063A /* TouchGestureRecognizer.h */,
+				43C2B0BC1CEE713B004F063A /* TouchGestureRecognizer.m */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -295,6 +306,14 @@
 				4342BEF01BC5984B0057C790 /* MainViewController.m */,
 			);
 			name = SpringBoard;
+			sourceTree = "<group>";
+		};
+		43C2B0C21CEE97F7004F063A /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				43C2B0C01CEE97E0004F063A /* CoreFoundation.framework */,
+			);
+			name = Framework;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -430,6 +449,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43C2B0BD1CEE713B004F063A /* TouchGestureRecognizer.m in Sources */,
 				4342BF031BC5A81C0057C790 /* SpringBoardFolderView.m in Sources */,
 				4342BEC31BC593C20057C790 /* MangaReader_PT.xcdatamodeld in Sources */,
 				43F7E9251BD414A800D3CDEF /* NavigationViewController.m in Sources */,

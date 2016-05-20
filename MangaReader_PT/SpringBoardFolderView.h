@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TouchGestureRecognizerDelegate.h"
 
 @protocol SpringBoardFolderViewDelegate;
 
 @class SpringBoardItemView;
 
-@interface SpringBoardFolderView : UIScrollView <UIScrollViewDelegate>
+@interface SpringBoardFolderView : UIScrollView <UIScrollViewDelegate, TouchGestureRecognizerDelegate>
 
 @property (nonatomic, weak) id <SpringBoardFolderViewDelegate> springBoardFolderDelegate;
 

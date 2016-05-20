@@ -9,6 +9,11 @@
 #import <QuartzCore/QuartzCore.h>
 #import "SpringBoardItemView.h"
 
+@interface SpringBoardItemView ()
+
+@property (nonatomic) CALayer *grayLayer;
+@end
+
 @implementation SpringBoardItemView
 
 
@@ -52,6 +57,7 @@
 - (void) reset
 {
     self.imageView.image = nil;
+    [self unselect];
 }
 
 - (void) renderView
@@ -64,7 +70,23 @@
     [super drawRect:rect];
     self.layer.borderColor = [UIColor lightGrayColor].CGColor;
     self.layer.borderWidth = 0.5f;
-    
+}
+
+- (void) select
+{
+    self.grayLayer = [CALayer layer];
+    self.grayLayer.frame = self.layer.bounds;
+    self.grayLayer.backgroundColor = [[UIColor grayColor] CGColor];
+    self.grayLayer.opacity = 0.3f;
+    [self.layer addSublayer:self.grayLayer];
+}
+
+- (void) unselect
+{
+    if (self.grayLayer != nil) {
+        [self.grayLayer removeFromSuperlayer];
+        self.grayLayer = nil;
+    }
 }
 
 @end
