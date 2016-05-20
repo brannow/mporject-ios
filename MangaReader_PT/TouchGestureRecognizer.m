@@ -15,7 +15,6 @@ bool distGr(CGPoint s, CGPoint c, CGFloat d)
 {
     CGPoint ret = { s.x - c.x, s.y - c.y };
     CGFloat a = sqrt(pow(ret.x, 2)+pow(ret.y, 2));
-    NSLog(@"%f", a);
     return a > d;
 }
 
