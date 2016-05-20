@@ -109,6 +109,13 @@ NSUInteger const pageRowRenderOffset = 1;
     }
 }
 
+// if currently decelerating prevent touch beginCalls with interrupt Recognizer Event
+- (bool) touchGestureRecognizerPreventBegan:(TouchGestureRecognizer *)gestureRecognizer
+                                  withEvent:(UIEvent *)event
+{
+    return self.decelerating;
+}
+
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     if(scrollView.contentOffset.y > self.cacheOffset+cacheOffsetFolderLimit ||

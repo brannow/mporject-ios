@@ -10,6 +10,8 @@
 
 @protocol TouchGestureRecognizerDelegate <UIGestureRecognizerDelegate>
 @optional
+- (bool) touchGestureRecognizerPreventBegan:(TouchGestureRecognizer *)gestureRecognizer withEvent:(UIEvent *)event;
+
 - (void) touchGestureRecognizer:(TouchGestureRecognizer *)gestureRecognizer foundPossibleTouch:(UITouch *)touch withEvent:(UIEvent *)event;
 
 - (void) touchGestureRecognizer:(TouchGestureRecognizer *)gestureRecognizer cancelPossibleTouch:(UITouch *)touch withEvent:(UIEvent *)event;

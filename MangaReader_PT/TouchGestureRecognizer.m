@@ -9,6 +9,15 @@
 #import "TouchGestureRecognizer.h"
 #import "TouchGestureRecognizerDelegate.h"
 #import <UIKit/UIGestureRecognizerSubclass.h>
+#include <math.h>
+
+/*
+bool distGr(CGPoint s, CGPoint c, CGFloat d)
+{
+    CGFloat a = sqrt(<#double#>);
+    CGFloat b = pow(<#double#>, <#double#>);
+    return NO;
+}*/
 
 @interface TouchGestureRecognizer ()
 
@@ -20,7 +29,11 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    if (self.currentTouch == nil && self.state == UIGestureRecognizerStatePossible && [[event allTouches] count] == 1) {
+    if (![self delegatePreventTouchBeganEvent:event] &&
+        self.currentTouch == nil &&
+        self.state == UIGestureRecognizerStatePossible &&
+        [[event allTouches] count] == 1
+    ) {
         self.currentTouch = [touches anyObject];
         self.currentTouchStartPos = [self.currentTouch locationInView:nil];
         if ([self.delegate respondsToSelector:@selector(touchGestureRecognizer:foundPossibleTouch:withEvent:)]) {
@@ -47,7 +60,6 @@
 }
 - (void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    self.state = UIGestureRecognizerStateFailed;
     if (self.currentTouch != nil && [touches containsObject:self.currentTouch]) {
         [self cancelTouchEvent:event];
     }
@@ -61,6 +73,15 @@
         }
     }
     self.currentTouch = nil;
+}
+
+// default NO prevent; if YES event Began is not called
+- (BOOL) delegatePreventTouchBeganEvent:(UIEvent *)event
+{
+    if ([self.delegate respondsToSelector:@selector(touchGestureRecognizerPreventBegan:withEvent:)]) {
+        return [(id)self.delegate touchGestureRecognizerPreventBegan:self withEvent:event];
+    }
+    return NO;
 }
 
 
