@@ -28,10 +28,10 @@ bool distGr(CGPoint s, CGPoint c, CGFloat d)
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    if (![self delegatePreventTouchBeganEvent:event] &&
-        self.currentTouch == nil &&
+    if (self.currentTouch == nil &&
         self.state == UIGestureRecognizerStatePossible &&
-        [[event allTouches] count] == 1
+        [[event allTouches] count] == 1 &&
+        ![self delegatePreventTouchBeganEvent:event]
     ) {
         self.currentTouch = [touches anyObject];
         self.currentTouchStartPos = [self.currentTouch locationInView:nil];
