@@ -11,13 +11,13 @@
 #import <UIKit/UIGestureRecognizerSubclass.h>
 #include <math.h>
 
-/*
 bool distGr(CGPoint s, CGPoint c, CGFloat d)
 {
-    CGFloat a = sqrt(<#double#>);
-    CGFloat b = pow(<#double#>, <#double#>);
-    return NO;
-}*/
+    CGPoint ret = { s.x - c.x, s.y - c.y };
+    CGFloat a = sqrt(pow(ret.x, 2)+pow(ret.y, 2));
+    NSLog(@"%f", a);
+    return a > d;
+}
 
 @interface TouchGestureRecognizer ()
 
@@ -44,9 +44,10 @@ bool distGr(CGPoint s, CGPoint c, CGFloat d)
 
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    // TODO: need here a safe move zone from 10pt maybe without cancel call
-    self.state = UIGestureRecognizerStateFailed;
-    [self cancelTouchEvent:event];
+    if (self.currentTouch && distGr(self.currentTouchStartPos, [[touches anyObject] locationInView:nil], 10)) {
+        self.state = UIGestureRecognizerStateCancelled;
+        [self cancelTouchEvent:event];
+    }
 }
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
