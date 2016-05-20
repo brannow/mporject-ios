@@ -13,7 +13,8 @@
 
 @interface SpringBoardFolderView ()
 
-@property (nonatomic, assign) CGFloat offset;
+@property (nonatomic, assign) CGFloat offsetX;
+@property (nonatomic, assign) CGFloat offsetY;
 @property (nonatomic, assign) NSInteger hLimit;
 @property (nonatomic, assign) CGRect itemTemplate;
 @property (nonatomic, assign) CGSize nativeItemSize;
@@ -171,20 +172,20 @@ NSUInteger const pageRowRenderOffset = 1;
     self.cacheRange = NSMakeRange(0, 0);
     
     self.itemTemplate = CGRectMake(0, 0, 100, 157);
-    self.offset = 10.0f;
+    self.offsetX = self.offsetY = 10.0f;
     CGFloat maxWidth = self.bounds.size.width;
-    CGFloat maxContentWidth = (self.itemTemplate.size.width + (self.offset * 2));
+    CGFloat maxContentWidth = (self.itemTemplate.size.width + (self.offsetX * 2));
     self.hLimit = floor(maxWidth / maxContentWidth);
     if (self.hLimit <= 1) {
         self.hLimit = 1;
     } else {
-        self.offset += floor((maxWidth-(maxContentWidth * self.hLimit)) / (self.hLimit * 2));
+        self.offsetX += floor((maxWidth-(maxContentWidth * self.hLimit)) / (self.hLimit * 2));
     }
-    self.nativeItemSize = CGSizeMake(self.itemTemplate.size.width + (self.offset*2), self.itemTemplate.size.height + (self.offset*2));
+    self.nativeItemSize = CGSizeMake(self.itemTemplate.size.width + (self.offsetX*2), self.itemTemplate.size.height + (self.offsetY*2));
     self.viewSize = self.bounds.size.height + self.nativeItemSize.height;
     NSInteger vMax = floor((self.maxItems - 1) / self.hLimit) + 1;
     self.viewSize = self.bounds.size.height + self.nativeItemSize.height;
-    CGFloat contentHeight = ((self.itemTemplate.size.height + self.offset) * vMax) + (self.offset * (vMax+1)) - self.offset;
+    CGFloat contentHeight = ((self.itemTemplate.size.height + self.offsetY) * vMax) + (self.offsetY * (vMax+1)) - self.offsetY;
     [self setContentSize:CGSizeMake(1, contentHeight)];
     self.maxY = self.contentSize.height - self.bounds.size.height;
     if(contentHeight < self.bounds.size.height) {
@@ -256,13 +257,13 @@ NSUInteger const pageRowRenderOffset = 1;
 
 -(NSRange) rangeOfItemsInViewPort
 {
-    if(self.maxItems <= 1) {
+    if (self.maxItems <= 1) {
         return NSMakeRange(0, 0);
     }
     
     CGFloat sOffset = self.contentOffset.y + self.contentInset.top;
-    if(self.maxY < sOffset) {
-        sOffset = self.maxY - self.offset;
+    if (self.maxY < sOffset) {
+        sOffset = self.maxY - self.offsetY;
     }
     
     CGFloat viewOffset = sOffset - self.nativeItemSize.height;
@@ -350,8 +351,8 @@ NSUInteger const pageRowRenderOffset = 1;
             NSUInteger vIndex = (NSUInteger) floor(index / self.hLimit);
             
             CGRect frame = self.itemTemplate;
-            frame.origin.x = (self.nativeItemSize.width * hIndex) + self.offset;
-            frame.origin.y = (self.nativeItemSize.height * vIndex) + self.offset;
+            frame.origin.x = (self.nativeItemSize.width * hIndex) + self.offsetX;
+            frame.origin.y = (self.nativeItemSize.height * vIndex) + self.offsetY;
             item.index = index;
             item.frame = frame;
             [self.items addObject:item];
