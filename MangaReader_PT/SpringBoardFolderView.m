@@ -11,7 +11,9 @@
 #import "SpringBoardFolderViewDelegate.h"
 #import "TouchGestureRecognizer.h"
 
-@interface SpringBoardFolderView ()
+@interface SpringBoardFolderView () {
+    NSUInteger *_vIndexMap;
+}
 
 @property (nonatomic, assign) CGFloat offsetX;
 @property (nonatomic, assign) CGFloat offsetY;
@@ -29,6 +31,8 @@
 @property (nonatomic) CGFloat maxY;
 @property (nonatomic) NSInteger specialStartEndIndex;
 
+@property(nonatomic,readwrite) NSUInteger *vIndexMap;
+
 @property (nonatomic, weak) SpringBoardItemView *selectedItem;
 @end
 
@@ -36,6 +40,10 @@ CGFloat const cacheOffsetFolderLimit = 50.0f;
 NSUInteger const pageRowRenderOffset = 1;
 
 @implementation SpringBoardFolderView
+
+- (void) dealloc {
+    free(_vIndexMap);
+}
 
 - (id) init
 {
@@ -194,9 +202,18 @@ NSUInteger const pageRowRenderOffset = 1;
         self.scrollEnabled = YES;
     }
     
+    NSUInteger *vIndexMap = malloc(self.maxItems*sizeof(NSUInteger));
+    // create vertical index Map
+    for (int i = 0; i < self.maxItems; ++i) {
+        vIndexMap[i] = (NSUInteger) floor(i / self.hLimit);
+    }
+    free(self.vIndexMap);
+    self.vIndexMap = vIndexMap;
+    
     self.unlocked = YES;
     [self renderFolderItems];
 }
+
 
 - (void) renderFolderItems
 {
@@ -346,9 +363,9 @@ NSUInteger const pageRowRenderOffset = 1;
         
         if(item) {
             NSUInteger hIndex = index % self.hLimit;
-            // todo:
-            // maybe pre-calculated dictionary with index = vIndex
-            NSUInteger vIndex = (NSUInteger) floor(index / self.hLimit);
+            NSUInteger vIndex = self.vIndexMap[index];
+            //NSUInteger vIndex = (NSUInteger) floor(index / self.hLimit);
+            
             
             CGRect frame = self.itemTemplate;
             frame.origin.x = (self.nativeItemSize.width * hIndex) + self.offsetX;

@@ -22,9 +22,6 @@
 @property (nonatomic, strong) ImageCache *imageCache;
 @property (nonatomic) BOOL hasUpdates;
 
-
-@property (weak, nonatomic) IBOutlet UIVisualEffectView *editBottomBarView;
-
 @end
 
 @implementation MainViewController
@@ -45,45 +42,10 @@
     [super viewDidLoad];
     [self setNeedsStatusBarAppearanceUpdate];
     
-    [self enterSpringboardDefaultMode];
-}
-
-- (void) enterSpringboardDefaultMode
-{
-    [self hideEditBottomBar];
     UIBarButtonItem *searchItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch
                                                                                 target:self
                                                                                 action:@selector(searchButtonItemClicked:)];
     [self.navigationItem setRightBarButtonItem:searchItem animated:YES];
-    
-    UIBarButtonItem *edit = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit
-                                                                          target:self
-                                                                          action:@selector(editButtonItemClicked:)];
-    [self.navigationItem setLeftBarButtonItem:edit animated:YES];
-}
-
-- (void) enterSpringBoardEditMode
-{
-    [self showEditBottomBar];
-    UIBarButtonItem *searchItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
-                                                                                target:self
-                                                                                action:@selector(searchButtonItemClicked:)];
-    [self.navigationItem setRightBarButtonItem:searchItem animated:YES];
-    
-    UIBarButtonItem *edit = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
-                                                                          target:self
-                                                                          action:@selector(doneButtonItemClicked:)];
-    [self.navigationItem setLeftBarButtonItem:edit animated:YES];
-}
-
-- (void) showEditBottomBar
-{
-    self.editBottomBarView.hidden = NO;
-}
-
-- (void) hideEditBottomBar
-{
-    self.editBottomBarView.hidden = YES;
 }
 
 - (void) viewDidAppear:(BOOL)animated
@@ -103,16 +65,6 @@
     NavigationViewController *searchNaviController = [[NavigationViewController alloc] initWithRootViewController:searchController];
     searchNaviController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
     [self presentViewController:searchNaviController animated:YES completion:^{}];
-}
-
-- (void) editButtonItemClicked:(UIBarButtonItem*)item
-{
-    [self enterSpringBoardEditMode];
-}
-
-- (void) doneButtonItemClicked:(UIBarButtonItem*)item
-{
-    [self enterSpringboardDefaultMode];
 }
 
 - (void) viewDidDisappear:(BOOL)animated

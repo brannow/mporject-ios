@@ -1,4 +1,47 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15E65" minimumToolsVersion="Automatic">
+    <entity name="Chapter" syncable="YES">
+        <attribute name="lastPageNumber" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="readed" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <relationship name="pages" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Page" inverseName="chapter" inverseEntity="Page" syncable="YES"/>
+        <relationship name="volume" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Volume" inverseName="chapters" inverseEntity="Volume" syncable="YES"/>
+    </entity>
+    <entity name="Folder" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="mangas" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Manga" inverseName="folder" inverseEntity="Manga" syncable="YES"/>
+    </entity>
+    <entity name="Genre" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="manga" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Manga" inverseName="genres" inverseEntity="Manga" syncable="YES"/>
+    </entity>
+    <entity name="Manga" syncable="YES">
+        <attribute name="artist" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="author" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="coverPath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="released" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="folder" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Folder" inverseName="mangas" inverseEntity="Folder" syncable="YES"/>
+        <relationship name="genres" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Genre" inverseName="manga" inverseEntity="Genre" syncable="YES"/>
+        <relationship name="volumes" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Volume" inverseName="manga" inverseEntity="Volume" syncable="YES"/>
+    </entity>
+    <entity name="Page" syncable="YES">
+        <attribute name="imagePath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="number" optional="YES" attributeType="Integer 32" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <relationship name="chapter" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Chapter" inverseName="pages" inverseEntity="Chapter" syncable="YES"/>
+    </entity>
+    <entity name="Volume" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="chapters" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Chapter" inverseName="volume" inverseEntity="Chapter" syncable="YES"/>
+        <relationship name="manga" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Manga" inverseName="volumes" inverseEntity="Manga" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Manga" positionX="-2673" positionY="-1638" width="128" height="163"/>
+        <element name="Volume" positionX="-2477" positionY="-1564" width="128" height="88"/>
+        <element name="Genre" positionX="-2466" positionY="-1648" width="128" height="73"/>
+        <element name="Page" positionX="-2126" positionY="-1552" width="128" height="88"/>
+        <element name="Chapter" positionX="-2297" positionY="-1512" width="128" height="120"/>
+        <element name="Folder" positionX="-2873" positionY="-1600" width="128" height="88"/>
+    </elements>
 </model>

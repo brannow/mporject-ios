@@ -167,6 +167,7 @@
 				4342BEB81BC593C20057C790 /* AppDelegate.h */,
 				4342BEB91BC593C20057C790 /* AppDelegate.m */,
 				4342BEEE1BC597F80057C790 /* ViewController */,
+				43DC0CF71CF1B6A500965B7C /* Entity */,
 				4342BEF51BC5A7630057C790 /* View */,
 				4362E0411BD3DABA000FC266 /* Service */,
 				4342BEED1BC5974F0057C790 /* Interface */,
@@ -314,6 +315,13 @@
 				43C2B0C01CEE97E0004F063A /* CoreFoundation.framework */,
 			);
 			name = Framework;
+			sourceTree = "<group>";
+		};
+		43DC0CF71CF1B6A500965B7C /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
