@@ -35,6 +35,7 @@ NSUInteger const pageRenderOffset = 1;
 
 -(void) awakeFromNib
 {
+    [super awakeFromNib];
     [self setDelegate:self];
     self.maxItems = 0;
     self.cacheRange = NSMakeRange(0, 0);
